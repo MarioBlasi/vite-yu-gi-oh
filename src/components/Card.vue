@@ -10,12 +10,14 @@ export default {
     axios
       .get("https://db.ygoprodeck.com/api/v7/cardinfo.php", {
         params: {
-          num: 555,
+          num: 15,
           offset: 0,
         },
       })
       .then((response) => {
         this.cards = response.data.data;
+        // this.store = response.data.data;
+        // this.store.info = response.data.info;
       })
       .catch((error) => {
         console.log(error);

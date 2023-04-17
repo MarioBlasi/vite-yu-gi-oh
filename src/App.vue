@@ -2,10 +2,10 @@
 import Header from "./components/Header.vue";
 import Card from "./components/Card.vue";
 import Button from "./components/Button.vue";
-// import MainContainer from "./MainContainer.vue";
+// import { store } from "./store";
 
 export default {
-  name: "Content",
+  name: "Appvue",
   components: {
     Header,
     Card,
@@ -13,6 +13,7 @@ export default {
   },
   data() {
     return {};
+    // store;
   },
 };
 </script>

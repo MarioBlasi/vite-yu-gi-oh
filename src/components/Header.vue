@@ -10,7 +10,7 @@ export default {
 <template>
   <header>
     <div>
-      <img src="./assets/img/09IKk6jB_400x400.png" alt="" />
+      <img src="../assets/img/09IKk6jB_400x400.png" alt="" />
       <span><strong>Yu-Gi-Oh Api</strong></span>
     </div>
   </header>
