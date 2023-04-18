@@ -2,7 +2,6 @@
 import Header from "./components/Header.vue";
 import Card from "./components/Card.vue";
 import Button from "./components/Button.vue";
-// import { store } from "./store";
 
 export default {
   name: "Appvue",
