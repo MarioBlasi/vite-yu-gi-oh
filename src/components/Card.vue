@@ -5,7 +5,6 @@ export default {
   data() {
     return {
       cards: [],
-      // store,
     };
   },
   mounted() {
@@ -51,6 +50,7 @@ export default {
 .card-container {
   width: calc(100% / 5);
   align-items: center;
+  padding: 0.5rem;
   border: 1rem solid white;
 
   .name {
