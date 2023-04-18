@@ -1,25 +1,23 @@
 <script>
+// import { store } from "./store.js";
+
 export default {
   name: "Button",
   data() {
-    return {};
+    return {
+      // store,
+    };
   },
 };
 </script>
 
 <template>
+  <div></div>
   <div class="container-Btn">
     <div class="row-Btn">
       <div class="col-Btn">
         <div class="btn-group">
-          <button
-            class="btn btn-light btn dropdown-toggle"
-            type="button"
-            data-bs-toggle="dropdown"
-            aria-expanded="false"
-          >
-            Alien
-          </button>
+          <!-- <button @click="store.increment()">Card {{ store.count }}</button> -->
           <ul class="dropdown-menu">
             ...
           </ul>

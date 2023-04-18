@@ -1,9 +1,11 @@
 <script>
 import axios from "axios";
+// import { store } from "./store.js";
 export default {
   data() {
     return {
       cards: [],
+      // store,
     };
   },
   mounted() {
@@ -16,8 +18,6 @@ export default {
       })
       .then((response) => {
         this.cards = response.data.data;
-        // this.store = response.data.data;
-        // this.store.info = response.data.info;
       })
       .catch((error) => {
         console.log(error);
@@ -29,6 +29,7 @@ export default {
 <template>
   <div class="content">
     <div class="card-container img-fluid" v-for="card in cards" :key="card.id">
+      <!-- <div @click="store.increment()">{{ store.count }}</div> -->
       <img :src="card.card_images[0].image_url" alt="card-image" />
       <b
         ><p class="name">{{ card.name }}</p></b

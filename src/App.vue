@@ -2,6 +2,7 @@
 import Header from "./components/Header.vue";
 import Card from "./components/Card.vue";
 import Button from "./components/Button.vue";
+import Footer from "./components/Footer.vue";
 
 export default {
   name: "Appvue",
@@ -9,10 +10,10 @@ export default {
     Header,
     Card,
     Button,
+    Footer,
   },
   data() {
     return {};
-    // store;
   },
 };
 </script>
@@ -37,6 +38,10 @@ export default {
       </div>
     </div>
   </div>
+  <!-- main -->
+
+  <Footer></Footer>
+  <!-- footer -->
 </template>
 
 <style lang="scss">
