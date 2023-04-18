@@ -1,6 +1,6 @@
 <script>
 import axios from "axios";
-// import { store } from "./store.js";
+
 export default {
   data() {
     return {
@@ -8,6 +8,7 @@ export default {
     };
   },
   mounted() {
+    // this.state.fetchCards(this.state.API_URL);
     axios
       .get("https://db.ygoprodeck.com/api/v7/cardinfo.php", {
         params: {

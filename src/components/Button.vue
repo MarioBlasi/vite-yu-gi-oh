@@ -1,18 +1,13 @@
 <script>
-// import { store } from "./store.js";
-
 export default {
   name: "Button",
   data() {
-    return {
-      // store,
-    };
+    return {};
   },
 };
 </script>
 
 <template>
-  <div></div>
   <div class="container-Btn">
     <div class="row-Btn">
       <div class="col-Btn">

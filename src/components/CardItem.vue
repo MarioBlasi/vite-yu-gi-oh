@@ -1,7 +1,16 @@
 <script>
+// import axios from "axios";
+// import { store } from ".store";
+// import CardItem from "./components/CardItem.vue";
 export default {
   name: "CardItem",
   props: ["card"],
+  data() {
+    return {};
+  },
+  // mounted() {
+  //   this.state.fetchCards(this.state.API_URL);
+  // },
 };
 </script>
 
@@ -24,4 +33,8 @@ export default {
   <!-- CARD -->
 </template>
 
-<style lang="scss"></style>
+<style lang="scss">
+.content {
+  background-color: brown;
+}
+</style>
