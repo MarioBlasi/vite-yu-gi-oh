@@ -33,8 +33,4 @@ export default {
   <!-- CARD -->
 </template>
 
-<style lang="scss">
-.content {
-  background-color: brown;
-}
-</style>
+<style lang="scss"></style>

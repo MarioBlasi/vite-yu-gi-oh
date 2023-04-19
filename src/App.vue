@@ -2,7 +2,7 @@
 import { store } from "./components/store";
 import AppHeader from "./components/AppHeader.vue";
 import CardList from "./components/CardList.vue";
-import Button from "./components/Button.vue";
+import TotalCards from "./components/TotalCards.vue";
 import AppFooter from "./components/AppFooter.vue";
 
 export default {
@@ -10,7 +10,7 @@ export default {
   components: {
     AppHeader,
     CardList,
-    Button,
+    TotalCards,
     AppFooter,
   },
   data() {
@@ -18,10 +18,20 @@ export default {
   },
   methods: {
     performSearch() {
-      console.log("Search ");
+      console.log("Search");
       console.log(this.store.searchText);
+      //ajax
+      const url = this.store.API_URL + `?name=${this.store.searchText}`;
+      console.log(url);
+      // this.store.fetch(url);
     },
   },
+  // mounted:{
+  //   setTimeout(()=>{
+  //     store.fetchCardList(store.API_URL);
+
+  //   },2000)
+  // }
 };
 </script>
 
@@ -40,13 +50,10 @@ export default {
   <!-- Lista archetipi -->
 
   <div class="main">
-    <Button></Button>
-    <!-- button -->
-
     <div class="container">
       <div class="row">
         <div class="col">
-          <div class="searchbox">
+          <div class="SearchBox">
             <!-- dobbiamo avere accesso a data -->
             <div class="input-group mb-3">
               <input
@@ -54,6 +61,7 @@ export default {
                 class="form-control"
                 placeholder=" search something"
                 v-model="store.searchText"
+                @keyup="performSearch()"
               />
               <button
                 class="btn btn-info"
@@ -63,29 +71,18 @@ export default {
                 Search
               </button>
             </div>
-            <!-- {{ store.searchText }} -->
+            {{ store.searchText }}
           </div>
         </div>
       </div>
     </div>
-    <!-- searchbox -->
+    <!-- <SearchBox></SearchBox> -->
+    <!-- searchBox -->
 
     <div class="container">
       <div class="row">
-        <!-- row-cols-1 row-cols-md-3 row-cols-xl-5 -->
         <div class="col">
-          <div class="total-cards">
-            <div class="alert alert-dismissible fade show" role="alert">
-              <button
-                type="button"
-                class="btn-close"
-                data-bs-dismiss="alert"
-                aria-label="Close"
-              ></button>
-              <strong>Total Cards:</strong>
-              <!-- {{ store.Card.length }} -->
-            </div>
-          </div>
+          <TotalCards></TotalCards>
           <!--  Total Cards -->
 
           <CardList></CardList>

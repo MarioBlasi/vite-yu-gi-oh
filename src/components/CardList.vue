@@ -1,5 +1,6 @@
 <script>
 import axios from "axios";
+// import { store } from "./components/store";
 
 export default {
   data() {
@@ -8,7 +9,7 @@ export default {
     };
   },
   mounted() {
-    // this.state.fetchCards(this.state.API_URL);
+    // this.state.fetchCardsList(this.state.API_URL);
     axios
       .get("https://db.ygoprodeck.com/api/v7/cardinfo.php", {
         params: {
@@ -51,7 +52,7 @@ export default {
 .card-container {
   width: calc(100% / 5);
   align-items: center;
-  padding: 0.5rem;
+
   border: 1rem solid white;
 
   .name {
